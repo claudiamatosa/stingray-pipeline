@@ -34,6 +34,25 @@ var puns = [
     'In Soviet Russia the pipeline breaks you!'
 ];
 
+('.jenkins .name').each(function () {
+    var name = $(this).text(),
+        header = $(this).parents('.header');
+
+    //ROSA
+    if (name.match(/rosam/g)) {
+        header.css({ background: "pink url('http://images1.wikia.nocookie.net/__cb20110301222835/uncyclopedia/images/1/14/Roses.._they_sparkle.gif') repeat 20px -32px" });
+        $(this).css({ color: 'Violet', textShadow: '1px 1px 1px white' });
+    }
+
+    //CARNEIRO
+    if (name.match(/carneiror/g)) {
+        header.css({ background: "white url('http://25.media.tumblr.com/3784c0fabc739cdcc1dbb18e1a5fc66f/tumblr_mil7o3TrPG1rshzllo5_250.gif') repeat 10px -20px" });
+        $(this).css({ color: 'black' });
+    }
+
+});
+
+
 if (first.hasClass('fail')) {
     var name = first.find('.name').text();
 
@@ -76,7 +95,7 @@ if (first.hasClass('fail')) {
             $('.cenas').remove();
             $('body').append(warning);
 
-            setInterval(function () { sound.play(); }, 1000*60); //1min
+            sound.play();
         }
     });
 }
