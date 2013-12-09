@@ -1,26 +1,26 @@
 var first = $('.steps .jenkins:nth(0) .header');
 var stingray = {
-	"ribeiroje": {
+    "ribeiroje": {
         name: "Eduardo Ribeiro",
         image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385728744.jpg?w=AAAGmTf1aBNr3vsbOxRqQw1KUwQQ8HA9h3dSvo2XZpbBGQ"
     },
-	"carneiror": {
+    "carneiror": {
         name: "Rui Carneiro",
         image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385741901.jpg?w=AADrRfJVyZy4uFNE68J9wv2LJcmCRBjDmaF93S30edw6Ug"
     },
-	"cunhac": {
+    "cunhac": {
         name: "Cristiano Cunha",
         image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385724639.jpg?w=AABQLFt-oGQw6pKaB-8a3r25aHTkAiVolf_kXtrVE1AMtw"
     },
-	"fernandesm": {
+    "fernandesm": {
         name: "Marta Fernandes",
         image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385715670.jpg?w=AABx9JSlgfSPG__jER8fOKdEf4wJvCVZvChUTrY9s6hrDw"
     },
-	"piresj": {
+    "piresj": {
         name: "João Pires",
         image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385716483.jpg?w=AACkhg9Ebz1IKHDu3igMgjqTVDvXN8T9UHr478hkgvPSCw"
     },
-	"rosam": {
+    "rosam": {
         name: "Miguel Rosa",
         image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385658145.jpg?w=AAB_h7Mj4Q-cybZcAd13C_46_NOFvBjApbzr6S4O1zhYcA"
     }
