@@ -95,7 +95,7 @@ if (first.hasClass('fail')) {
             $('.cenas').remove();
             $('body').append(warning);
 
-            sound.play();
+            //sound.play();
         }
     });
 }
