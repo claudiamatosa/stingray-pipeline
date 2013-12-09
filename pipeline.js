@@ -34,7 +34,7 @@ var puns = [
     'In Soviet Russia the pipeline breaks you!'
 ];
 
-$('.jenkins .name').each(function () {
+$('.jenkins .succ .name').each(function () {
     var name = $(this).text(),
         header = $(this).parents('.header');
 
