@@ -47,7 +47,7 @@ $('.jenkins .name').each(function () {
     //CARNEIRO
     if (name.match(/carneiror/g)) {
         header.css({ background: "white url('http://25.media.tumblr.com/3784c0fabc739cdcc1dbb18e1a5fc66f/tumblr_mil7o3TrPG1rshzllo5_250.gif') repeat 10px -20px" });
-        $(this).css({ color: 'black' });
+        $(this).css({ color: 'white' });
     }
 
 });
