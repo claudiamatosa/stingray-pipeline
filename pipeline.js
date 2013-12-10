@@ -107,4 +107,4 @@ $.getScript('https://raw.github.com/loktar00/JQuery-Snowfall/master/snowfall.js'
 });
 
 // Christmas!!
-$('<style type="text/css">.testbox .date { background: url("http://www.google.com/url?sa=i&source=images&cd=&docid=wwBbPCPyzBV22M&tbnid=Inz4UYvuy1GbkM:&ved=0CAUQjBw&url=http%3A%2F%2Fyamahahometheatre.org%2Fwp-content%2Fuploads%2F2013%2F12%2Fgif-christmas-lightstop-10-biggest-outdoor-christmas-lights-house-decorations-digsdigs-u3gxrukq.gif&ei=R9imUsW4B8mn0QWMt4BA&psig=AFQjCNFF_OTCRfUCfLrDm5aLcUYXbmQ0Qw&ust=1386752455178872"); background-size: 100% 100%; }</style>').appendTo($('head'));
+$('<style type="text/css">.testbox .date { background: url("http://yamahahometheatre.org/wp-content/uploads/2013/12/gif-christmas-lightstop-10-biggest-outdoor-christmas-lights-house-decorations-digsdigs-u3gxrukq.gif"); background-size: 100% 100%; }</style>').appendTo($('head'));
