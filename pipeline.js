@@ -1,28 +1,23 @@
+var github = "https://raw.github.com/sgtcarneiro/stingray-pipeline/master/";
 var first = $('.steps .jenkins:nth(0) .header');
 var stingray = {
     "ribeiroje": {
-        name: "Eduardo Ribeiro",
-        image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385728744.jpg?w=AAAGmTf1aBNr3vsbOxRqQw1KUwQQ8HA9h3dSvo2XZpbBGQ"
+        name: "Eduardo Ribeiro"
     },
     "carneiror": {
-        name: "Rui Carneiro",
-        image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385741901.jpg?w=AADrRfJVyZy4uFNE68J9wv2LJcmCRBjDmaF93S30edw6Ug"
+        name: "Rui Carneiro"
     },
     "cunhac": {
-        name: "Cristiano Cunha",
-        image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385724639.jpg?w=AABQLFt-oGQw6pKaB-8a3r25aHTkAiVolf_kXtrVE1AMtw"
+        name: "Cristiano Cunha"
     },
     "fernandesm": {
-        name: "Marta Fernandes",
-        image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385715670.jpg?w=AABx9JSlgfSPG__jER8fOKdEf4wJvCVZvChUTrY9s6hrDw"
+        name: "Marta Fernandes"
     },
     "piresj": {
-        name: "João Pires",
-        image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385716483.jpg?w=AACkhg9Ebz1IKHDu3igMgjqTVDvXN8T9UHr478hkgvPSCw"
+        name: "João Pires"
     },
     "rosam": {
-        name: "Miguel Rosa",
-        image: "https://dl-web.dropbox.com/get/PicSay/picsay-1385658145.jpg?w=AAB_h7Mj4Q-cybZcAd13C_46_NOFvBjApbzr6S4O1zhYcA"
+        name: "Miguel Rosa"
     }
 };
 var sound = new Audio('http://cd.textfiles.com/10000soundssongs/WAV/BUZZER.WAV');
@@ -62,7 +57,7 @@ if (first.hasClass('fail')) {
         if (name.match(key)) {
             var rand = Math.floor(Math.random()*puns.length);
             var pun = puns[rand];
-            var warning = $('<div class="cenas"><h1>Wanted</h1><img src="' + stingray[key]['image'] + '" /><p>' + pun.replace('%s', stingray[key]['name']) + '</p></div>');
+            var warning = $('<div class="cenas"><h1>Wanted</h1><img src="' + github + '/picsay/' + key + '.jpg" /><p>' + pun.replace('%s', stingray[key]['name']) + '</p></div>');
             warning.css({
                 position: 'absolute',
                 top: '241px',
