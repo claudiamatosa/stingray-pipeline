@@ -103,7 +103,8 @@ if (first.hasClass('fail')) {
 
 // Snow time!!!
 $.getScript('https://raw.github.com/loktar00/JQuery-Snowfall/master/snowfall.js', function () {
-    snowFall.snow(document.getElementsByTagName("body"), {round : true, minSize: 5, maxSize:8});
+    snowFall.snow(document.getElementsByTagName("body"), {round : true, minSize: 5, maxSize: 12});
+    snowFall.snow(document.getElementsByTagName("body"), {round : true, minSize: 2, maxSize: 8});
 });
 
 // Christmas!!
