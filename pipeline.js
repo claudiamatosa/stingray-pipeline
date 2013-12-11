@@ -1,5 +1,6 @@
 var github = "https://raw.github.com/sgtcarneiro/stingray-pipeline/master/";
 var first = $('.steps .jenkins:nth(0) .header');
+var build = first.find('.build').text().substr(7);
 var stingray = {
     "ribeiroje": {
         name: "Eduardo Ribeiro"
@@ -49,6 +50,13 @@ $('.jenkins .succ .name').each(function () {
 });
 */
 
+// Add this build to the hash
+if (Number(build) != 0) {
+    window.location.hash = build;
+}
+
+
+// THE BUILD HAS FAILED! BLAME THE BITCHES!
 if (first.hasClass('fail')) {
     var name = first.find('.name').text();
 
