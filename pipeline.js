@@ -22,6 +22,7 @@ var stingray = {
     }
 };
 var sound = new Audio('http://cd.textfiles.com/10000soundssongs/WAV/BUZZER.WAV');
+var police = new Audio('http://www.linux-video.net/Samples/Wav/policesiren.wav');
 
 var puns = [
     'To %s Clean/Install is so over rated!',
@@ -50,58 +51,72 @@ $('.jenkins .succ .name').each(function () {
 });
 */
 
-// Add this build to the hash
-if (Number(build) != 0) {
-    window.location.hash = build;
+// Add the funny stuff the first time this build gets on the pipe
+/*if (Number(window.location.hash) != Number(build)) {
+    if (first.hasClass('fail')) {
+        police.play();
+    }
 }
+
+// Add this build to the hash
+if (first.hasClass('succ') || first.hasClass('fail')) {
+    window.location.hash = build;
+}*/
 
 
 // THE BUILD HAS FAILED! BLAME THE BITCHES!
 if (first.hasClass('fail')) {
-    var name = first.find('.name').text();
+    var name = first.find('.name').text(),
+        blame = "",
+        photo = "unknown";
 
     $(Object.keys(stingray)).each(function () {
         var key = this.toString();
         if (name.match(key)) {
-            var rand = Math.floor(Math.random()*puns.length);
-            var pun = puns[rand];
-            var warning = $('<div class="cenas"><h1>Wanted</h1><img src="' + github + '/picsay/' + key + '.jpg" /><p>' + pun.replace('%s', stingray[key]['name']) + '</p></div>');
-            warning.css({
-                position: 'absolute',
-                top: '241px',
-                right: 0,
-                bottom: 0,
-                width: '49%',
-                background: 'rgba(255, 51, 0, 0.6)',
-                padding: '20px',
-                textAlign: 'center'
-            });
-            warning.find('h1, p').css({
-                fontSize: '34px',
-                textAlign: 'center',
-                float: 'none',
-                fontWeight: 'bold',
-                color: 'white'
-
-            });
-	        warning.find('h1').css({
-                fontSize: '70px',
-                fontFamily: 'serif',
-                textShadow: '1px -2px 0 #000000'
-            });
-            warning.find('img').css({
-                maxWidth: '410px'
-            });
-            warning.find('p').css({
-                lineHeight: '70px',
-                textShadow: '1px 2px 0 #000000'
-            });
-            $('.cenas').remove();
-            $('body').append(warning);
-
-            //sound.play();
+            blame = stingray[key]['name'];
+            photo = key;
         }
     });
+
+    if (blame == "") {
+        blame = "John Doe";
+    }
+
+    var rand = Math.floor(Math.random()*puns.length);
+    var pun = puns[rand];
+    var warning = $('<div class="cenas"><h1>Wanted</h1><img src="' + github + '/picsay/' + photo + '.jpg" /><p>' + pun.replace('%s', blame) + '</p></div>');
+    warning.css({
+        position: 'absolute',
+        top: '241px',
+        right: 0,
+        bottom: 0,
+        width: '49%',
+        background: 'rgba(255, 51, 0, 0.6)',
+        padding: '20px',
+        textAlign: 'center'
+    });
+    warning.find('h1, p').css({
+        fontSize: '34px',
+        textAlign: 'center',
+        float: 'none',
+        fontWeight: 'bold',
+        color: 'white'
+
+    });
+    warning.find('h1').css({
+        fontSize: '70px',
+        fontFamily: 'serif',
+        textShadow: '1px -2px 0 #000000'
+    });
+    warning.find('img').css({
+        maxWidth: '410px'
+    });
+    warning.find('p').css({
+        lineHeight: '70px',
+        textShadow: '1px 2px 0 #000000'
+    });
+    $('.cenas').remove();
+    $('body').append(warning);
 }
 
 // Snow time!!!
