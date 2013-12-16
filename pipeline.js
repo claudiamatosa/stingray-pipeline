@@ -126,7 +126,7 @@ $.getScript('https://raw.github.com/loktar00/JQuery-Snowfall/master/snowfall.js'
 });
 
 // Christmas!!
-$('<style type="text/css">.succ-holder .testbox .date { background: url("http://yamahahometheatre.org/wp-content/uploads/2013/12/gif-christmas-lightstop-10-biggest-outdoor-christmas-lights-house-decorations-digsdigs-u3gxrukq.gif"); background-size: 100% 100%; }</style>').appendTo($('head'));
+$('<style type="text/css">.succ-holder .testbox .date { background: url("' + github + '/gifs/tree.gif") 0 158px; background-size: 100%; border: 4px solid #009900; height: 120px; }</style>').appendTo($('head'));
 
 // Fire!!
 $('<style type="text/css">.fail-holder .testbox .date { background: url("' + github + '/gifs/fire.gif") no-repeat -35px -5px; background-size: 162%; border: 4px solid red; height: 120px; text-shadow: 1px 1px 0 black; }</style>').appendTo($('head'));
