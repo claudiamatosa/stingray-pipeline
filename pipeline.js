@@ -132,4 +132,4 @@ $('<style type="text/css">.succ-holder .testbox .date { background: url("' + git
 $('<style type="text/css">.fail-holder .testbox .date { background: url("' + github + '/gifs/fire.gif") no-repeat -35px -5px; background-size: 162%; border: 4px solid red; height: 120px; text-shadow: 1px 1px 0 black; opacity: 0.8; }</style>').appendTo($('head'));
 
 // Santa
-$('<style type="text/css">body { background: white url("http://growingroomchildcare.com/wp-content/uploads/2013/12/Santa-Claus-Sleigh.jpg") no-repeat center bottom; background-size: 50%; }</style>').appendTo($('head'));
+$('<style type="text/css">body { background: white url("http://growingroomchildcare.com/wp-content/uploads/2013/12/Santa-Claus-Sleigh.jpg") no-repeat center bottom; background-size: 30%; }</style>').appendTo($('head'));
